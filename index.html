@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link type="text/css" rel="stylesheet" href="css/magicscroll.css"/>
+<script type="text/javascript" src="js/magicscroll.js"></script>
+    <title>Document</title>
+    <script>
+            function arrowRight() {
+              var scroll = document.getElementById("scroll")
+              scroll.scrollTo({
+                top:0,
+                left: 20,
+                behavior:"smooth"
+              })
+        }
+        function arrowLeft() {
+          var scroll = document.getElementById("scroll")
+          scroll.scrollTo({
+                top:0,
+                right: 20,
+                behavior:"smooth"
+              })
+        }
+      window.onload = function () {
+        var btn = document.querySelector(".UP");
+        window.onscroll = function () {
+          if (window.scrollY >= 500) {
+            btn.style.display = "block";
+            btn.style.background = "#54bab9";
+            btn.style.color = "white";
+          } else btn.style.display = "none";
+        };
+        btn.onclick = function () {
+          scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+          });
+        };
+        function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+      };
+    </script>
+  </head>
+  <body>
+    <button class="btn UP">UP</button>
+    <div class="Section1 reveal" dir="rtl" lang="ar">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">منصة تجربة</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >الرئيسية</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">الأسعار</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">المدونة</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">تجربة المنصة</a>
+              </li>
+            </ul>
+            <div class="auth">
+              <button type="button" class="btn login">تسجيل الدخول</button>
+              <button type="button" class="btn signUp">الاشتراك</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="minasa">
+        <span class="polygon1">
+          <img src="img/polygon1.svg" alt="" srcset="" />
+        </span>
+        <h1>منصة تجربة</h1>
+        <p>
+          تحّول إلى التجارة الإلكترونية بسهولة و سرعة و أمتلك متجر <br />
+          إلكتروني خاص بك بجميع مزايا التجارة الإلكترونية مع توفير <br />
+          الخدمات المساندة له
+        </p>
+        <button class="btn">إبدأ الان</button>
+        <span class="polygon2">
+          <img src="img/polygon2.svg" alt="" />
+        </span>
+      </div>
+    </div>
+    <div class="Section2 reveal mt-5 container" dir="rtl" lang="ar">
+      <div class="row">
+        <div class="col-sm-12 col-md-5 col-xl-3 mb-2">
+          <h2>إحصائيات مستخدمين منصة تجربة</h2>
+        </div>
+        <div class="col-sm-12 col-md-5 col-xl-3 WebsiteInfo mb-2">
+          <img src="img/icon1.svg" alt="" />
+          <div>
+            <p>متجر إلكتروني</p>
+            <span>1.8 ألف</span>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-5 col-xl-3 WebsiteInfo mb-2">
+          <img src="img/icon1.svg" alt="" />
+          <div>
+            <p>متجر إلكتروني</p>
+            <span>1.8 ألف</span>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-5 col-xl-3 WebsiteInfo mb-2">
+          <img src="img/icon1.svg" alt="" />
+          <div>
+            <p>متجر إلكتروني</p>
+            <span>1.8 ألف</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Section3 reveal mt-5" dir="rtl" lang="ar">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="card mb-3" style="max-width: 1000px">
+            <div class="row g-0">
+              <div class="col-md-4 img">
+                <img
+                  src="img/img1.svg"
+                  class="img-fluid rounded-start"
+                  alt="..."
+                />
+                <img src="img/playIcon.svg" class="playIcon" alt="" />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <span class="Ellipse"></span>
+                  <span class="Ellipse2"></span>
+                  <h5 class="card-title">
+                    تعرف على منصة تجربة وإبدأ تجارتك معنا
+                  </h5>
+                  <p class="card-text">
+                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                    توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل
+                    هذا النص أو العديد من النصوص .
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted ms-3">تابعنا على</small>
+                    <span class="iconSocial"
+                      ><img src="img/twitter.svg" alt=""
+                    /></span>
+                    <span class="iconSocial"
+                      ><img src="img/facebook.svg" alt=""
+                    /></span>
+                    <span class="iconSocial"
+                      ><img src="img/linkden.svg" alt=""
+                    /></span>
+                    <span class="iconSocial"
+                      ><img src="img/google.svg" alt=""
+                    /></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Section4 reveal mt-5" dir="rtl" lang="ar">
+      <h1 class="title">لماذا أختار تجربة ؟؟</h1>
+      <div class="container mt-5">
+        <div class="row justify-content-center gap-3">
+          <div class="card mb-3 active" style="max-width: 18rem">
+            <div class="card-body">
+              <img src="img/cardIcon1.svg" alt="" srcset="" />
+              <h5 class="card-title">تقارير مفصلة لقياس أداء المتجر</h5>
+              <p class="card-text">
+                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
+                هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص .
+              </p>
+            </div>
+          </div>
+          <div class="card mb-3" style="max-width: 18rem">
+            <div class="card-body">
+              <img src="img/cardIcon2.svg" alt="" srcset="" />
+              <h5 class="card-title">تصاميم احترافية تناسب ذوقك</h5>
+              <p class="card-text">
+                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
+                هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص .
+              </p>
+            </div>
+          </div>
+          <div class="card mb-3" style="max-width: 18rem">
+            <div class="card-body">
+              <img src="img/cardIcon3.svg" alt="" srcset="" />
+              <h5 class="card-title">سهولة إدراج المنتجات وإدارة المخزون</h5>
+              <p class="card-text">
+                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
+                هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص .
+              </p>
+            </div>
+          </div>
+          <div class="card mb-3" style="max-width: 18rem">
+            <div class="card-body">
+              <img src="img/cardIcon1.svg" alt="" />
+              <h5 class="card-title">تقارير مفصلة لقياس أداء المتجر</h5>
+              <p class="card-text">
+                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
+                هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص .
+              </p>
+            </div>
+          </div>
+          <div class="card mb-3" style="max-width: 18rem">
+            <div class="card-body">
+              <img src="img/cardIcon2.svg" alt="" srcset="" />
+              <h5 class="card-title">تصاميم احترافية تناسب ذوقك</h5>
+              <p class="card-text">
+                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
+                هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص .
+              </p>
+            </div>
+          </div>
+          <div class="card mb-3" style="max-width: 18rem">
+            <div class="card-body">
+              <img src="img/cardIcon3.svg" alt="" srcset="" />
+              <h5 class="card-title">سهولة إدراج المنتجات وإدارة المخزون</h5>
+              <p class="card-text">
+                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
+                هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص .
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Section5 reveal mt-5" dir="rtl" lang="ar">
+      <h1 class="title">لماذا أختار تجربة ؟؟</h1>
+      <div class="plane" style="text-align: center">
+        <button class="btn ms-4">سنوي</button>
+        <button class="btn active">شهري</button>
+      </div>
+      <div class="container mt-5">
+        <div class="row justify-content-center gap-3">
+          <div class="card text-center pt-3" style="width: 18rem">
+            <div class="card-body">
+              <h3 class="card-title mb-3">البداية</h3>
+              <h1 class="mb-2">$19 <span>/شهر</span></h1>
+              <p class="card-text">
+                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
+                هذا النص
+              </p>
+              <ul>
+                <li>نص يمكن أن يستبدل</li>
+                <li>نص يمكن أن يستبدل</li>
+                <li>نص يمكن أن يستبدل</li>
+                <li>نص يمكن أن يستبدل</li>
+                <li>نص يمكن أن يستبدل</li>
+              </ul>
+              <button class="btn">إختيار الخطة</button>
+            </div>
+          </div>
+          <div class="card active text-center pt-3" style="width: 18rem">
+            <div class="card-body">
+              <h3 class="card-title mb-3">البداية</h3>
+              <h1 class="mb-2">$19 <span>/شهر</span></h1>
+              <p class="card-text">
+                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
+                هذا النص
+              </p>
+              <ul>
+                <li>نص يمكن أن يستبدل</li>
+                <li>نص يمكن أن يستبدل</li>
+                <li>نص يمكن أن يستبدل</li>
+                <li>نص يمكن أن يستبدل</li>
+                <li>نص يمكن أن يستبدل</li>
+              </ul>
+              <button class="btn">إختيار الخطة</button>
+            </div>
+          </div>
+          <div class="card text-center pt-3" style="width: 18rem">
+            <div class="card-body">
+              <h3 class="card-title mb-3">البداية</h3>
+              <h1 class="mb-2">$19 <span>/شهر</span></h1>
+              <p class="card-text">
+                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
+                هذا النص
+              </p>
+              <ul>
+                <li>نص يمكن أن يستبدل</li>
+                <li>نص يمكن أن يستبدل</li>
+                <li>نص يمكن أن يستبدل</li>
+                <li>نص يمكن أن يستبدل</li>
+                <li>نص يمكن أن يستبدل</li>
+              </ul>
+              <button class="btn">إختيار الخطة</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 150px" class="Section6 reveal" dir="rtl" lang="ar">
+      <h1 class="title mb-5">شركائنا في النجاح</h1>
+      <div class="container">
+        <div class="row MagicScroll gap-3 justify-content-center" id="scroll" style="flex-wrap: nowrap;
+        overflow: hidden;">
+          <div class="card text-white" style="max-width: 16rem">
+            <div class="background">
+              <button class="btn btn-outline-light">عرض التفاصيل</button>
+            </div>
+            <img src="img/product.svg" class="card-img" alt="..." />
+            <div class="card-img-overlay">
+              <h5 class="card-title">متجر الاحباب</h5>
+            </div>
+          </div>
+          <div class="card text-white" style="max-width: 16rem">
+            <div class="background">
+              <button class="btn btn-outline-light">عرض التفاصيل</button>
+            </div>
+            <img src="img/product2.svg" class="card-img" alt="..." />
+            <div class="card-img-overlay">
+              <h5 class="card-title">متجر الهاشمي</h5>
+            </div>
+          </div>
+          <div class="card text-white" style="max-width: 16rem">
+            <div class="background">
+              <button class="btn btn-outline-light">عرض التفاصيل</button>
+            </div>
+            <img src="img/product3.svg" class="card-img" alt="..." />
+            <div class="card-img-overlay">
+              <h5 class="card-title">متجر العيلة</h5>
+            </div>
+          </div>
+          <div class="card text-white" style="max-width: 16rem">
+            <div class="background">
+              <button class="btn btn-outline-light">عرض التفاصيل</button>
+            </div>
+            <img src="img/product4.svg" class="card-img" alt="..." />
+            <div class="card-img-overlay">
+              <h5 class="card-title">متجر زدنا</h5>
+            </div>
+          </div>
+          <div class="card text-white" style="max-width: 16rem">
+            <div class="background">
+              <button class="btn btn-outline-light">عرض التفاصيل</button>
+            </div>
+            <img src="img/product4.svg" class="card-img" alt="..." />
+            <div class="card-img-overlay">
+              <h5 class="card-title">متجر زدنا</h5>
+            </div>
+          </div>
+          <div class="card text-white" style="max-width: 16rem">
+            <div class="background">
+              <button class="btn btn-outline-light">عرض التفاصيل</button>
+            </div>
+            <img src="img/product4.svg" class="card-img" alt="..." />
+            <div class="card-img-overlay">
+              <h5 class="card-title">متجر زدنا</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="btn-toolbar justify-content-center mt-5"
+        role="toolbar"
+        aria-label="Toolbar with button groups"
+      >
+        <!--<div class="btn-group" role="group" aria-label="Third group">
+          <button type="button" class="btn" style="background: #54bab9">
+            <img src="img/arowRight.svg"  alt="" srcset="" />
+          </button>
+        </div>
+        <div class="btn-group me-2" role="group" aria-label="First group">
+          <button type="button" class="btn" onclick="arrowLeft()" style="background: #dadada">
+            <img src="img/arowLeft.svg" alt="" srcset="" />
+          </button>
+        </div>-->
+      </div>
+    </div>
+    <div class="Section7 reveal mt-5 pt-5" dir="rtl" lang="ar">
+      <h1 class="title pb-5">ماذا يقول المستخدمون عنا ؟؟</h1>
+      <div
+        id="carouselExampleDark"
+        class="carousel carousel-dark slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <div class="content">
+              <div>
+                <img src="img/carsoulImage.svg" alt="" srcset="" />
+                <p>
+                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                  توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا
+                  النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف
+                  التى يولدها التطبيق.
+                </p>
+                <h1>علي شاهين</h1>
+                <span>مدير  متجر  زادنا</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <div class="content">
+              <div >
+                <img src="img/carsoulImage.svg" alt="" srcset="" />
+                <p>
+                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                  توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا
+                  النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف
+                  التى يولدها التطبيق.
+                </p>
+                <h1>علي شاهين</h1>
+                <span>مدير  متجر  زادنا</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="content">
+              <div>
+                <img src="img/carsoulImage.svg" alt="" srcset="" />
+                <p>
+                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                  توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا
+                  النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف
+                  التى يولدها التطبيق.
+                </p>
+                <h1>علي شاهين</h1>
+                <span>مدير  متجر  زادنا</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="Section8 reveal mt-5" dir="rtl" lang="ar">
+      <div class="container-fluid">
+        <div class="card">
+          <div class="row justify-content-center">
+            <div class="col-md-12 col-xl-6">
+              <h4>احصل على تطبيق تجربة  الآن</h4>
+              <h5>تطبيق سلة للتاجر متوفر على متجر التطبيقات
+              </h5>
+            </div>
+            <div class="col-md-12 col-xl-6">
+              <div class="row">
+                <div class="col">
+                  <img src="img/appalLogo.svg" alt="">
+                </div>
+                <div class="col">
+                  <img src="img/androidLogo.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Section9 reveal mt-5 mb-5" dir="rtl" lang="ar">
+      <div>
+        <h1>تواصل معنا </h1>
+        <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص <br>العربى، حيث يمكنك أن تولد مثل هذا النص</p>
+      </div>
+      <form action="">
+        <div>
+           <input type="text" placeholder="الاسم">
+          <input type="text" placeholder="البريد الالكتروني">         
+          </div>
+        <textarea name="" id="" placeholder="التفاصيل"></textarea><br>
+        <button class="btn">إرسال</button>
+      </form>
+    </div>
+    <div class="footer" dir="rtl" lang="ar">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-3 mb-2">
+            <div class="site-info">
+              <h2 style="color: #54BAB9;">منصة تجربة</h2>
+              <h4>التواصل</h4>
+              <p> الهاتف : +123 400 123</p>
+              <p>
+                العنوان : هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة  
+              </p>
+              <p>البريد الالكتروني : example@mail.com</p>
+              <div class="d-flex gap-1">
+                <p><img src="img/BE.svg" alt=""></p>
+              <p><img src="img/instaIcon.svg" alt=""></p>
+              <p><img src="img/linkden.svg" alt=""></p>
+              <p><img src="img/baskt.svg" alt="" ></p>
+              <p><img src="img/facebook.svg" alt="" srcset=""></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-2">
+            <div class="helpful-links">
+              <h2>الصفحات </h2>
+              <div class="row">
+                <div class="col">
+                  <ul class="list-unstyled">
+                    <li>الرئيسية</li>
+                    <li>الأسعار</li>
+                    <li>المدونة</li>
+                    <li>تجربة الموقع</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-2">
+            <div class="helpful-links">
+              <h2>المنصة</h2>
+              <div class="row">
+                <div class="col">
+                  <ul class="list-unstyled">
+                    <li>حول المنصة</li>
+                    <li>المدونة</li>
+                    <li>تواصل معنا</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-2">
+            <div class="contact">
+              <h2>السياسات</h2>
+              <ul class="list-unstyled">
+                <li>شروط الخدمة</li>
+                <li>سياسة الخصوصية</li>
+                <li>الأمان</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>
